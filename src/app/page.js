@@ -4,10 +4,6 @@ import Link from 'next/link';
 import logo from '@/assets/logovision.png';
 import logopitw from '@/assets/image.png';
 
-export const metadata = {
-  title: 'Vision Bin - PITW',
-  description: 'Promociona tu app Vision Bin y su impacto ambiental. Transformando comunidades con educación ambiental y reportes inteligentes. Desarrollado por estudiantes de la carrera de Ingeniería en Sistemas Computacionales.',
-}
 export default function Home() {
   return (
     <div className="bg-gray-100 text-gray-800">
