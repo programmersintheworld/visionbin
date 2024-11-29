@@ -65,7 +65,7 @@ export default function Home() {
         <p className="mt-4 text-center">
           Ingresa al siguiente enlace para que seas de los primeros en probar nuestra app.
         </p>
-        <Link className="bg-green-700 hover:bg-green-800 text-white font-bold mt-6 px-6 py-2 rounded-lg" href="https://expo.dev/preview/update?message=corrections&updateRuntimeVersion=1.0.0&createdAt=2024-11-29T17%3A21%3A55.442Z&slug=exp&projectId=029f935d-d3b2-429f-8a87-cba2049eda30&group=8188a409-3251-4173-af37-1a594776c81d" target="_blank">
+        <Link className="bg-green-700 hover:bg-green-800 text-white font-bold mt-6 px-6 py-2 rounded-lg" href="https://expo.dev/preview/update?message=corrections&updateRuntimeVersion=1.0.0&createdAt=2024-11-29T18%3A07%3A00.842Z&slug=exp&projectId=029f935d-d3b2-429f-8a87-cba2049eda30&group=b01aec35-42fe-44a5-914d-17f936c43ac7" target="_blank">
           Prueba la Alpha
         </Link>
       </section>
