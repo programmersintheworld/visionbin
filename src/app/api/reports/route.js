@@ -2,7 +2,6 @@ import { generateID } from "@/helpers/generateID";
 import { NextResponse } from "next/server";
 import { turso } from "@/helpers/config";
 import { parseInsertArray } from "@/helpers/parseFunctions";
-import { uploadImage } from "@/helpers/imgur";
 import { authMiddleware } from "@/helpers/auth.middleware";
 
 export async function GET(req) {
