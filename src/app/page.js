@@ -1,100 +1,106 @@
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import logo from '@/assets/logovision.png';
+import logopitw from '@/assets/image.png';
 
+export const metadata = {
+  title: 'Vision Bin - PITW',
+  description: 'Promociona tu app Vision Bin y su impacto ambiental. Transformando comunidades con educación ambiental y reportes inteligentes. Desarrollado por estudiantes de la carrera de Ingeniería en Sistemas Computacionales.',
+}
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-gray-100 text-gray-800">
+      <header className="bg-green-700 text-white py-20 px-5 text-center">
+        <Image src={logo} alt="Vision Bin" className='mx-auto' width={300} height={300} />
+        <h1 className="text-4xl font-bold">
+          Vision Bin
+        </h1>
+        <p className="mt-4 text-lg mb-8">
+          Transformando comunidades con educación ambiental y reportes inteligentes.
+        </p>
+        <Link className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold mt-8 px-6 py-2 rounded-lg" href="#beneficios">
+          Conoce Más
+        </Link>
+      </header>
+      <section className="py-10 px-5">
+        <h2 className="text-3xl font-bold text-center text-green-800">¿Cuál es el problema?</h2>
+        <p className="mt-6 text-lg text-center">
+          En Ixtapaluca, se generan 43 toneladas de residuos diarios, pero 5 toneladas terminan en lugares inadecuados. *Vision Bin* busca cambiar esta realidad.
+        </p>
+        <h2 className="text-3xl font-bold text-center text-green-800 mt-10">Nuestra Solución</h2>
+        <p className="mt-6 text-lg text-center">
+          Una app móvil que permite reportar residuos sólidos y enseña cómo separarlos correctamente, promoviendo la participación ciudadana.
+        </p>
+      </section>
+      <section className="py-10 bg-white">
+        <h2 className="text-3xl font-bold text-center text-green-800">Características Clave</h2>
+        <div className="flex flex-wrap justify-center mt-8">
+          <div className="max-w-sm bg-gray-200 p-6 m-4 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold">Reportes Inteligentes</h3>
+            <p className="mt-4">
+              Usa nuestra herramienta de alertas para localizar y reportar residuos en zonas inadecuadas.
+            </p>
+          </div>
+          <div className="max-w-sm bg-gray-200 p-6 m-4 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold">Educación Ambiental</h3>
+            <p className="mt-4">
+              Aprende a separar residuos de manera sencilla usando la cámara de tu celular.
+            </p>
+          </div>
+          <div className="max-w-sm bg-gray-200 p-6 m-4 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold">Mapa Interactivo</h3>
+            <p className="mt-4">
+              Encuentra puntos de reciclaje y zonas de impacto en tu comunidad.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+      <section className="py-10 px-5 bg-green-100">
+        <h2 className="text-3xl font-bold text-center text-green-800" id='beneficios'>Beneficios de Vision Bin</h2>
+        <ul className="mt-6 space-y-4 text-lg text-center">
+          <li>- Menor probabilidad de inundaciones.</li>
+          <li>- Mejora la calidad del aire.</li>
+          <li>- Comunidades más limpias y sostenibles.</li>
+        </ul>
+      </section>
+      <section className="py-10 px-5">
+        <h2 className="text-3xl font-bold text-center text-green-800">Nuestro Equipo</h2>
+        <p className="text-center mt-4">
+          Conoce a los desarrolladores detrás de Vision Bin.
+        </p>
+        <div className="flex flex-wrap justify-center mt-6">
+          {['Luis', 'Alan', 'Jesús', 'Alexei', 'Sofía'].map((name) => (
+            <div
+              key={name}
+              className="bg-gray-200 p-6 m-4 max-w-xs rounded-lg text-center shadow-lg"
+            >
+              <h3 className="text-xl font-bold">{name}</h3>
+              <p>Ingeniería en Sistemas Computacionales</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="py-10 bg-white">
+        <Image src={logopitw} alt="Programmers in the Wild" className='mx-auto invert' width={300} height={300} />
+        <h1 className="text-3xl font-bold text-center text-green-800">Nosotros somos Programmers in the World</h1>
+        <p className="mt-4 text-center">
+          Desarrollamos aplicaciones web y móviles para resolver problemas reales.
+        </p>
+        <div className="flex justify-center mt-6">
+          <Link className="bg-green-700 hover:bg-green-800 text-white font-bold px-6 py-2 rounded-lg" href="https://programmersintheworld.com" target="_blank">
+            Conoce Más
+          </Link>
+        </div>
+      </section>
+      <footer className="bg-green-700 text-white py-10 text-center">
+        <h2 className="text-2xl font-bold">Únete a la Revolución Ambiental</h2>
+        <p className="my-4">
+          Sigue el desarrollo de Vision Bin y mantente informado sobre su lanzamiento.
+        </p>
+        <Link className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold mt-6 px-6 py-2 rounded-lg" href="https://programmersintheworld.com/#contact">
+          Contáctanos
+        </Link>
       </footer>
     </div>
   );
