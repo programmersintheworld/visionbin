@@ -38,7 +38,7 @@ export async function POST(req) {
             expiresIn: process.env.JWT_EXPIRES_IN,
         });
 
-        return NextResponse.json({ message: "User created successfully", token }, { status: 201 });
+        return NextResponse.json({ message: "User created successfully", token, id }, { status: 201 });
     } catch (error) {
 
         return NextResponse.json({ message: "Internal server error" }, { status: 500 });

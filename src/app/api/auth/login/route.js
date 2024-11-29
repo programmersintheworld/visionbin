@@ -26,7 +26,7 @@ export async function POST(req) {
             expiresIn: process.env.JWT_EXPIRES_IN,
         });
 
-        return NextResponse.json({ message: "Login successful", token, rows }, { status: 200 });
+        return NextResponse.json({ message: "Login successful", token, id: rows.id }, { status: 200 });
     } catch (error) {
         return NextResponse.json({ message: "Internal server error" }, { status: 500 });
     }
